@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入系統</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h1>歡迎光臨，請輸入帳號密碼</h1>
+
+    <h2>登入系統</h2>
+    <div class="content">
+      <form action="/signin" method="post">
+        <div class="form-group">
+          <label for="username">帳號：</label>
+          <input type="text" id="username" name="username" required /><br />
+        </div>
+        <div class="form-group">
+          <label for="password">密碼：</label>
+          <input type="password" id="password" name="password" required /><br />
+        </div>
+        <div class="form-group-1">
+          <label for="agree">同意條款</label>
+          <input type="checkbox" id="agree" name="agree" required /><br />
+        </div>
+        <div class="form-group-2">
+          <button type="submit">登入</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      // 監聽頁面加載事件
+      window.addEventListener("load", function (event) {
+        // 清除帳號和密碼字段
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+      });
+      // 監聽返回鍵動作
+      window.addEventListener("popstate", function (event) {
+        // 清除帳號和密碼字段
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+      });
+    </script>
+  </body>
+</html>

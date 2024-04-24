@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入系統</title>
+  </head>
+  <link rel="stylesheet" href="/static/style.css" />
+  <body>
+    <h1>失敗頁面</h1>
+    <h2>帳號、密碼輸入錯誤</h2>
+    <script>
+      setTimeout(function () {
+        alert("帳號或密碼錯誤，正在返回登入頁面...");
+        window.location.href = "/";
+      }, 500); //  = 0.5秒
+    </script>
+  </body>
+</html>
